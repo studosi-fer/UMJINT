@@ -1,0 +1,80 @@
+Predavanja: 10.5 al pogledaj i 10.1-4 na brzinu barem
+
+1. Objasniti ID3 algoritam
+ • To je jednostavan algoritam za izgradnju stabla odluke
+ • Stablo s manje cvorova u praksi daje bolju generalizaciju
+ • lzgradnja stagla odluke kreće u čvoru gdje se ispituje koju značajku je najbolje uzet. Interno se radi provjera ako se podjela napravi po svakoj od značajki to ona značajka za koju imamo naveču informacijsku dobit se uzima kao korijen. Postupak se rekurzivno ponavlja sve do listova. List dobijemo kada nam skup podataka ima sve vrijednosti ciljne značajke iste. List možemo dobiti i kada nemamo više po čemu podijeliti stablo pa uzimamo najčešču vrijednost ciljna za čvor iznad. 
+ 2. Koji je čeet problem sa stablIma?
+ • Prenaučenost algoritma, ako je model presložen, previše če se prilagoditi podacima na kojima je treniran, a davat će loše predikcije na nevidenim podacima. Ukratko, loše generalizira.
+ • Model savršreno klasificira primjere iz skupa za učenje dok nevidene primjere loše klasificira
+ • Ako primjer za učenje ima šum, dolazi do prenaučenosti 
+ 3. Kako se ponađa accuracy na tralnIng setu I na testnom setu ovisno o kompleksnostl stabla?
+ • Na training setu je 100%, a na testnom nije 100% 
+ 4. Objasniti kako ete implementirall limitiranje dubine
+ • Dubinu sam implementirao tako da sam rekurzivno prosljedivao dubinu te ju smanjivao. Kada bi dubina dosla do 0 znaci da moramo izac i vracamo list koji ima kao ciljnu vrijednost najcescu vrijednost na tom cvoru 
+ 5. Šta ja accuracy?
+ • Omjer točno klasificiranih primjera i ukupnog broja primjera na testnom skupu 
+ 6. leakve želinto de bude metrim konfusija?
+ • Želimo da bude dijagonalna odnosno da na svim ostalim vrijednostima ima 0 osim na dijagonali 
+ 7. Jel ID3 udjek točno klmifidra već videne primjere?
+ • Da osim ako radimo podrezivanje 
+ 8. Mogu li m stable generelno koristiti se regresiju?
+ • Da 
+ 9. Kaja tipova strojnog učanja imamo?
+ • Nadzirano
+ • Nenadzirano - dani su podaci bez ciljne vrijednosti, treba naći pravilnost u podacima
+ • Poddano/ojačano učenje strategije koja rješava problem, odgovor je li uspješan dobivamo tek na kraju. 
+ 10. Objasniti supan~ laarning
+ • Imarno podatke u obliku (ulaz, izlaz) odnosno trazimo preslikavanje iziaz=fiulaz), za nekakv dani ulaz tražimo koju će vrijednost iziaza imati ta funkcija
+ • Ako je izlaz nekakva diskretna/nebrojčana vrijednost onda se radi o klasifiakciji. Primjer: na temelju slike lefimo saznati spol osobe
+ • Ako je izlaz kontinuirana/brojcana vrijednost onda se radi o regresiji. Primjer: na temelju slike želimo saznati godine osobe
+ • Nadzirani model treba prvo trenirati te se tek kasnije koristi za predikciju 
+ 11. Objasniti fit metodu
+ • Fit metoda se koristi za treniranje
+ • U njoj se gradi stablo odluke rekurzivno
+ • Sve isto kao 1. zadatak 
+ 12. Vrate nenadsiranog učenja?
+ • Grupiranje
+ • Okrivanje novih vrijednosti
+ • Smanjenje dimenzionalnosti 
+ 13. Što je matrica konfusfie?
+ • Matrica koja nam pokazuje tocnost algoritma, ali s uvidom u sve odluke
+ • Prednost nad tocnost je sto nam daje precizniji uvid u tendenciju stabla 
+ 14. Kakva je matrica kad je točnost 100%, a kakva kad je 0%
+ • Ako je sve tocno onda je dijagonalna, a kad je 0 ima dijagonalu 0. 
+ 15. Kada Je bolje pogledati metricu konfuslje nego se oslonitl samo na točnost?
+ • Kada algoritam bolje predvida za neku vrijednost oznake klase 
+ 16. Kako se računa informacfiske dobit?
+ • Entropija prije podjele - entropija nakon podjele 
+ 17. Šta snači kada ja informacijska dabit 0?
+ • Znaci da nismo dobili nikakvu korist od podjele prema nekoj znacajci 
+ 18. Kakva ja pranaučanost u stablu odluka?
+ • Do prenaučenosti dolazi ako primjeri za učenje imaju šum - pogrešna vrijednost značajke ili pogrešna oznaka klase 
+ 19. Kako sprijeati prenaučenost u stablime?
+ • Metodom unakrsne provjere - ispitujemo koliko dobro model radi na nevidenim podacima
+ • Model ucimo na skupu za ucenje, a zatim pomoću tog modela radimo predikciju na skupu za testiranje i na tom skupu računamo točnost ili pogrešku
+ • Točnost na skupu za testiranje upućuje na sposobnost generalizacije modela.
+ • Modele različite složenosti treniramo na skupu za učenje i svaki ispitujemo na skupu za provjeru, najoptimalniji koristimo za testiranje 
+ 20. Što ja antropija?
+ • Mjera koja nam govori kako je sustav uređen
+ • Ako imamo maksimalnu entropiju odosno 1 u sustavu je kaos odnsono imamo jednak broj svih ciljnih vrijednosti
+ • Ako imamo minimlanu entropiju odnosno 0 onda imamo najbolju podjelu, svi primjeri u svakoj grani pripadju istoj klasi 
+ 21. Što nam govoti Informadjska doblt?
+ • Govori nam koliko će se povećati uredenost sustava nakon podjele po nekoj značajci
+ • Što veća informacijska dobit to je sustav uređeniji nakon podjele 
+ 22. Koji set se konsti ze rečunanje metrice konfuslje?
+ • testiranje 
+
+1. Što bi ti rekao da je strojno učenje?
+Ovdje je on tražio "nekakva paradigma gdje sa znanjem pomoću računala radimo nekakve predikcije". Tako nešto
+2. Koja smo dva algoritma radili?
+ID3 (stablo odluke) i Bayesov Klasifikator
+3. Koja je nekakva temeljna razlika između ta dva algoritma?
+Ovdje basically traži da se kaže da je kod Bayesovog klasifikatora očit taj osjećaj za vjerojatnost (jer se i računa), a kod stabla tog baš i nema. (spomenuti formulu za Bayesa)
+
+Od pitanja koja se gore ne spominju mene je demosica jos pitala kako iz matrice konfuzije dobiti tocnost i nacrta na papir neko stablo i oznaci put i pita da izrazis to  logicki
+A čemu ustvari služi matrica i zašto accuracy nije dovoljan?
+Meni je asistentica objasnila da tipa imaš testne primjere i imas npr. 9 rezultata s yes i 1 s no i okej mozda ti model radi za rezultat yes odlicno ali za no uopce i to je problem a tebi accuracy samo govori da je 90% dobro i ti to protumacis kao da je model dobar, a s matricom vidis gdje sto radi ili ne radi
+Vrste strojnog učenja i koja je razlika izmedu njih, kaze ti da prodes malo po kodu i objasnis sta se desava, zasto imamo depth limit, cemu sluzi matrica i jel nam dosta samo accuracy i zasto nije (mozes navest primjer), kako odredujemo accuracy, cemu sluzi set za ucenje/set za provjeru/set za testiranje. to je vise manje to, moguce da sam nesto zaboravio ali pitanja su dosta jednostavna
+I prenaucenost isto pita, zapravo je podpitanje od depth limita
+Generalizacija kj je, kaj je strojno ucenje, vrste, specificno kj je nas kod    

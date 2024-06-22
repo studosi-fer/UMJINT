@@ -1,0 +1,21 @@
+Predavanja: 5.1 5.2 5.3 6.1 6.2 6.3
+
+Prvo otvori kod i doslovno u detalje po svakoj funkciji kako sta radi i to
+Ono objasnit kako funkcionira rezolucija opovrgavanjem 
+Mora sam objasnit kako funkc strategija brisanjem i ono strategija skupa potpore
+Koja je prednost korištenja skupa potpore(zasto uvik jedna klauzula koja ide iz resolve mora bit iz tog skupa SoS)
+Onda je izvadila papir i napisala mi 3 primjera
+2 su bila da mi je dala klauzule i cilj i da napravim rezoluciju opovrgavanjem
+Je bi da mi je zadala formulu koja nije u CNF i da ju pretvorim u cnf: ( A->B)->C
+Teorija:
+Sta je to odluciva logika
+Sta je to valjana formula
+Koje su to rezolucijske strategije
+Sta je klauzula
+Sta je CNF
+Je li FOL odluciva
+•svedi izraz na CNF-> izraz koji sam dobio je vec bio u CNFu i to je trebalo biti trik pitanje ali ja sam izveo trik nad asistentom jer nisam znao sto napraviti pa nisam ništa napravio i on je rekao TOČNO, OVO JE BIO TRIK!
+
+•riješi rezolucijom opovrgavanja 3 retka -> ja to raspisao u one liner i pokrizao sve u jednom retku(čitaj ne znam sta radim) i kaže asistent BRAVO nisam još vidio ovakav shortcut
+
+•objasni netraktabilnost -> ovo sam znao

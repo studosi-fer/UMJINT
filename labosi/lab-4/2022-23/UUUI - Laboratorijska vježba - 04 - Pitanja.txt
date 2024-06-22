@@ -1,0 +1,38 @@
+Predavanja: 11. i 12. cjelina
+
+1. Što je aktivacijska funkcija?
+ • Step ili prijenosna funkcija je funkcija koja oblikuje izlaz pojedinog neurona da bi se izbjegla linearnost i omogućilo učinkovito učenje.
+2. Najčešće korištene prijenosne funkcije:
+ • Identitet (ADALINE neuron), Funkcija skoka (TLU perceptron), Sigmoidalna funkcija (sigmoidalni neuron), Tangens hiperbolni, Zglobnica (ReLU), Propusna zglobnica (Leaky ReLU).
+3. Koja je razlika između ove LV i prošle?
+ • Prošla je stablo a ova je mreža. 	
+4. Zašto radimo križanje i mutiranje?
+ • Križanje radimo da bismo proizveli potencijalno bolju neuronsku mrežu djeteta, križajući dva pomno odabrana roditelja.
+ • Mutiranje radimo da bismo sprječili zaustavljanje učenja u „lokalnom ekstremu“, tj. da bi mreža bila u stanju naći bolje rješenje usprkos već pronađenom „dobrom“.
+5. Zašto je kod rosenbrock greška velika, a kod sinus mala?
+ • Glavni razlog je složenost funkcija.
+ • Sinus funkcija je glatka periodička funkcija pa je njene obrasce lako predvidjeti manjoj neuronskoj mreži. 
+ • Rosenrock funkcija ima uski zakrivljeni minimum. Funkcija je u blizini minimuma strma, dok je daleko od minimuma plosnata. Učenje tog uskog minimuma predstavlja problem neuronskoj mreži.
+6. Da smo umjesto gaussa za početne težine koristili nešto drugo koja bi bila posljedica?
+ • Neuronskoj mreži bi trebalo duže da konvergira do rješenja
+7. Kako promjena parametra K utječe na pogrešku?
+ • K označava standardnu devijaciju Gaussovog šuma. 
+ • Manji K dovodi do manje intenzivne mutacije, mreža polako i detaljno uči
+ • Veći K dovodi do više intenzivne mutacije, agresivniji proces učenja, uzrokuje nestabilnost i fluktuacije u performansama.
+8. Kako radi stohastički backpropagation?
+ • Izračunava se gradijent funkcije greške u odnosu na težinu mreže te se pomoću njega ažurira težina greške unatraške prolazom kroz mrežu. Težina se ažurira nakon svakog primjera iz dataseta. 
+ • Postoji i učenje u grupama podataka (batchevima), gdje se težina ažurira batch po batch, što pridonosi preciznosti po cijenu brzine.
+9. Što je srednje kvadratno odstupanje i kako ga računamo?
+ • MSE je mjera za procjenu greške između predviđenih vrijednosti modela i stvarnih vrijednosti. Računa se kao prosjek kvadrata razlika između stvarnih i predviđenih vrijednosti (formula).
+10. Kako funkcionira NN u odnosu na jedan neuron?
+ • Jedan neuron može modelirati samo linearne odnose između ulaza i izlaza dok neuronska mreža može modelirati slože nelinearne odnose zahvaljujući višeslojnosti i nelinearnim aktivacijskim funkcijama. 
+ • NN se sastoji od neurona koji obavljaju jednostavne akcije (linearna kombinacija i primjena aktivacijske funkcije), koje zajedno mogu obavljati napredne zadatke.
+ • Jedan neuron ima ograničenu sposobnost učenja dok je neuronska mreža sposobna učiti i generalizirati iz složenih i velikih skupova podataka.
+11. Zašto koristimo nasumično izabrane težine?
+ • Zbog izbjegavanja simetrije (svi neuroni generiraju iste izlaze za iste ulaze), nasumičnost omogućuje konvergenciju prema optimumu i efikasno učenje, kao i primjenu optimizacijskih algoritama i izbjegavanje cikličkog ponašanja (u ne unaprednim NN).
+12. Kako se odrede dimenzije težinskih matrica?
+ • Težinske matrice su dimenzija AxB, gdje su A i B brojevi neurona u susjednim slojevima mreže.
+13. Koji su alternativni načini križanja djece?
+ • Može se koristit breaking point gdje sve težine prije dolaze iz jednog roditelja, a sve težine poslije iz drugog.
+14. Zašto ne koristimo prijenosnu funkciju na kraju mreže?
+ • Jer je moguće da vrijednosti funkcije koju želimo aproksimirati mogu biti izvan područja kodomene prijenosne funkcije.

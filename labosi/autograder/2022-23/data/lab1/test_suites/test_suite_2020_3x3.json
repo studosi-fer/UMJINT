@@ -1,0 +1,36 @@
+{
+    "BFS": [
+        {
+            "description": "Test for BFS on 3x3_puzzle.txt state space",
+            "execution_args": "--ss 3x3_puzzle.txt --alg bfs",
+            "expected_output_fields": {
+                "FOUND_SOLUTION": {"match": "exact", "value": "yes"},
+                "PATH": {
+                    "match": "ignored",
+                    "value": "876_543_21x => 876_543_2x1 => 876_543_x21 => 876_x43_521 => x76_843_521 => 7x6_843_521 => 746_8x3_521 => 746_83x_521 => 746_831_52x => 746_831_5x2 => 746_831_x52 => 746_x31_852 => x46_731_852 => 4x6_731_852 => 436_7x1_852 => 436_71x_852 => 43x_716_852 => 4x3_716_852 => 413_7x6_852 => 413_756_8x2 => 413_756_82x => 413_75x_826 => 413_7x5_826 => 413_725_8x6 => 413_725_x86 => 413_x25_786 => x13_425_786 => 1x3_425_786 => 123_4x5_786 => 123_45x_786 => 123_456_78x"
+                },
+                "PATH_LENGTH": {"match": "exact", "value": "31"},
+                "STATES_VISITED": {"match": "ignored", "value": "181366"},
+                "TOTAL_COST": {"match": "ignored", "value": "30.0"}
+            },
+            "name": "BFS"
+        }
+    ],
+    "UCS": [
+        {
+            "description": "Test for UCS on 3x3_puzzle.txt state space",
+            "execution_args": "--ss 3x3_puzzle.txt --alg ucs",
+            "expected_output_fields": {
+                "FOUND_SOLUTION": {"match": "exact", "value": "yes"},
+                "PATH": {
+                    "match": "ignored",
+                    "value": "876_543_21x => 876_543_2x1 => 876_543_x21 => 876_x43_521 => x76_843_521 => 7x6_843_521 => 746_8x3_521 => 746_83x_521 => 746_831_52x => 746_831_5x2 => 746_831_x52 => 746_x31_852 => x46_731_852 => 4x6_731_852 => 436_7x1_852 => 436_71x_852 => 43x_716_852 => 4x3_716_852 => 413_7x6_852 => 413_756_8x2 => 413_756_82x => 413_75x_826 => 413_7x5_826 => 413_725_8x6 => 413_725_x86 => 413_x25_786 => x13_425_786 => 1x3_425_786 => 123_4x5_786 => 123_45x_786 => 123_456_78x"
+                },
+                "PATH_LENGTH": {"match": "ignored", "value": "31"},
+                "STATES_VISITED": {"match": "ignored", "value": "181218"},
+                "TOTAL_COST": {"match": "exact", "value": "30.0"}
+            },
+            "name": "UCS"
+        }
+    ]
+}

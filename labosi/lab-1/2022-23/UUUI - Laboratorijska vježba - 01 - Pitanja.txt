@@ -1,0 +1,10 @@
+Predavanja: 2. i 3.1. i 3.3
+
+Pito me da odaberem koji cu mu algoritam proc lajnu po lajnu, ja odabro bfs
+Pito me jel su bfs i dfs potpuni i optimalni, koji je uvjet da bfs bude optimalan (rj. cost mora biti isti za sve prijelaze), koji je uvjet da je dfs potpun (rj. mora se provjerit jel stanje u closed)
+Onda me pito sta je heuristika, optimisticnost, konzistentnost i da mu prodem lajnu po lajnu check_consistent()
+
+Sta bih promijenio u bfsu da postane dfs - stavljas na pocetak novu djecu
+ako imamo sve iste cijene na grafu, koja je razlika izmedju ucsa i bfsa onda - nema je
+ako imamo 2 iste heuristike, koja je bolja - uzmes max za svako stanje jer je tako sigurnije
+ako je heuristika konzistentna je li nuzno i optimisticna, i kontra - Konzistentna heuristika je nuzno optimisticna, a u praksi su optimisticne heuristike ujedno i konzistentne
